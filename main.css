@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{background-color:rgba(85,89,158,1);
+padding: 0px;
+color: #ebebeb;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.rectangle{
+    height: 300px;
+    width: 400px;
+    background: linear-gradient(38deg, rgba(131,58,180,1) 10%, rgba(253,29,29,1) 56%, rgba(252,176,69,1) 100%);
+   margin: auto;
+   transition: 1s;
+   -webkit-box-shadow: 60px 66px 92px -11px rgba(0,0,0,0.5);
+-moz-box-shadow: 60px 66px 92px -11px rgba(0,0,0,0.5);
+box-shadow: 60px 66px 92px -11px rgba(0,0,0,0.5);
+}
+.container{
+    margin: 5% 25% 0 25%;
+    background-color: rgb(red, green, blue, 0.1);
+}
+
+.direita {
+    float: right;
+}
+
+input{
+    text-align: center;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255, 0.8);
+    -webkit-box-shadow: 9px 2px 112px -39px rgba(0,0,0,0.57);
+-moz-box-shadow: 9px 2px 112px -39px rgba(0,0,0,0.57);
+box-shadow: 9px 2px 112px -39px rgba(0,0,0,0.57);
+}
+
+label{
+    font-size: 30px;
+    color: rgb(255, 255, 255, 0.1);
+    margin-left: 10px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+h3{
+    font-weight: lighter;
+    text-align: center;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+
+
+button:hover{
+    background-color: #ebebeb;
+    color:#181818;
+     
+}
+
+hr{
+    border: solid 1;
+}
+
+a{
+    text-decoration: none;
+    color:#ebebeb;
+}
+ul{
+    margin:none;
+    padding: none;
+    margin: 50px auto auto auto;
+    display: block;
+   text-align: center;
+   margin-right: 35px;
+   
+    
+}
+ul li{
+    margin: none;
+    list-style: none;
+    text-emphasis: none;
+    text-decoration: none;
+    display: inline;
+    font-size: 20px;
+    margin:none;
+    padding: none;
+    padding: 10px 30px;
+    -webkit-box-shadow: 48px 51px 37px -46px rgba(0,0,0,0.75);
+-moz-box-shadow: 48px 51px 37px -46px rgba(0,0,0,0.75);
+box-shadow: 48px 51px 37px -46px rgba(0,0,0,0.75);
+    
+}
+
+.copy {
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    background-color: rgb(130, 207, 94, 0.8);
+    transition: 0.5s;
+    border:1px solid rgb(130, 207, 94, 1);
+}
+
+.copy:hover{
+    font-size :25px;
+}
+
+.reset{
+    background-color: rgb(178, 34, 34, 0.8);
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    transition: 0.5s;
+    border:1px solid rgb(178,34, 34, 1);
+}
+
+.reset:hover{
+    font-size :25px;
+}

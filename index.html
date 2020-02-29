@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Border-radius Preview</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+<div class="container">
+        <h1>Border-radius Preview</h1>
+        <hr>
+        <h3>A perfect tool for lazy ass designers</h3>
+    
+    <input type="text" class="esquerda" id="borda_tl" onkeyup=alteraBorderRadius() maxlength="3" onfocusout="vazioZero(); alteraBorderRadius()">
+    <label for="" class="direita">%</label>
+    <input type="text" class="direita" id="borda_tr" onkeyup=alteraBorderRadius() maxlength="3"onfocusout="vazioZero(); alteraBorderRadius()">
+    <label for="">%</label>
+    <div class="rectangle" id="retangulo">
+    </div>
+    <input type="text" class="esquerda" id="borda_bl" onkeyup=alteraBorderRadius() maxlength="3" onfocusout="vazioZero(); alteraBorderRadius()">
+    <label for="" class="direita">%</label>
+    <input type="text" class="direita" id="borda_br" onkeyup=alteraBorderRadius() maxlength="3" onfocusout="vazioZero(); alteraBorderRadius()">
+    <label for="">%</label>  
+</div>
+<ul class="list">
+    <a href=""><li class="copy" onclick=copyClip()>Copy CSS to clipboard</li></a> 
+    <a href=""><li class="reset" onclick=reset()>Reset</li></a>
+</ul>
+
+<br>
+
+<script>
+    
+  let borda_tl = document.getElementById("borda_tl") ;
+  let  borda_tr = document.getElementById("borda_tr");
+  let  borda_bl = document.getElementById("borda_bl");
+   let borda_br = document.getElementById("borda_br");
+  let  retangulo = document.getElementById("retangulo");
+
+  if(borda_tl.value == "") borda_tl.value = "0";
+    if(borda_tr.value == "") borda_tr.value = "0";
+    if(borda_br.value == "") borda_br.value = "0";
+    if(borda_bl.value == "") borda_bl.value = "0";
+
+    function vazioZero(){
+        if(borda_tl.value == "") borda_tl.value = "0";
+    if(borda_tr.value == "") borda_tr.value = "0";
+    if(borda_br.value == "") borda_br.value = "0";
+    if(borda_bl.value == "") borda_bl.value = "0";
+    }
+    function alteraBorderRadius(){
+      
+
+        retangulo.style.borderRadius = `${borda_tl.value}% ${borda_tr.value}% ${borda_br.value}% ${borda_bl.value}%`
+    }
+
+    function reset(){
+     borda_tl.value = "0";
+     borda_tr.value = "0";
+     borda_br.value = "0";
+     borda_bl.value = "0";
+    }
+
+    function copyClip(){
+      
+        const el = document.createElement('textarea');
+  el.value = `border-radius: ${borda_tl.value}% ${borda_tr.value}% ${borda_br.value}% ${borda_bl.value}%;`;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+       
+    }
+</script>
+</body>
+</html>
